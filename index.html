@@ -131,12 +131,33 @@
       <button data-cat="Audio & Voice" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Audio & Voice</button>
       <button data-cat="Image & Design" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Image & Design</button>
       <button data-cat="Search & Research" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Search & Research</button>
-      <button data-cat="Infrastructure" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Infrastructure</button>
+    </div>
+
+    <!-- WEEKLY FRONTIER RADAR OPT-IN BANNER -->
+    <div class="max-w-4xl mx-auto my-8 p-6 bg-gradient-to-r from-purple-900/30 via-[#101422] to-cyan-950/20 border border-purple-500/30 rounded-2xl relative overflow-hidden text-left">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-purple-500/10 border border-purple-500/30 rounded-full text-xs text-purple-400 font-semibold mb-2 font-mono">
+        📡 The Weekly Frontier AI Radar
+      </div>
+      <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Track the Frontier: Top 5 Breakthrough AI Tools Every Monday</h3>
+      <p class="text-xs text-gray-400 mb-4 max-w-2xl">
+        Get our benchmarks, prompt engineering breakdowns, and early-access generative AI discoveries delivered free to your inbox.
+      </p>
+
+      <form onsubmit="handleRadarLeadSubmit(event)" id="radar-lead-form" class="flex flex-col sm:flex-row gap-2 max-w-xl">
+        <input type="email" id="radar-email" required placeholder="Enter your work email..." class="flex-1 px-4 py-2.5 bg-[#080b11] border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-400">
+        <button type="submit" class="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold rounded-xl text-xs transition cursor-pointer shadow-lg shadow-purple-600/20 whitespace-nowrap">
+          Subscribe Free 🚀
+        </button>
+      </form>
+      <div id="radar-success-msg" class="hidden mt-3 p-3 bg-purple-500/20 border border-purple-500/40 rounded-xl text-xs text-purple-300">
+        🎉 You're in! Check your inbox for the 2026 Frontier Benchmark Report.
+      </div>
     </div>
   </section>
 
   <!-- DIRECTORY GRID -->
   <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24" id="directory">
+
     <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
       <div>
         <h2 class="text-xl font-bold text-white flex items-center gap-2">
@@ -370,7 +391,24 @@
       document.getElementById('tool-modal').classList.add('hidden');
     });
 
+    function handleRadarLeadSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('radar-email').value;
+      localStorage.setItem('aitoolradar_lead', JSON.stringify({ email, time: new Date().toISOString() }));
+      try {
+        fetch('https://formsubmit.co/ajax/ceopatinhalo@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email, product: 'AIToolRadar Weekly Frontier Newsletter' })
+        }).catch(() => {});
+      } catch(err) {}
+
+      document.getElementById('radar-lead-form').classList.add('hidden');
+      document.getElementById('radar-success-msg').classList.remove('hidden');
+    }
+
     init();
   </script>
 </body>
 </html>
+
