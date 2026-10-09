@@ -1,0 +1,19 @@
+# AIToolRadar.io
+> The definitive real-time directory and radar for verified Generative AI tools, foundation models, and autonomous agents.
+
+## What is AIToolRadar.io?
+AIToolRadar.io curates and ranks the most capable artificial intelligence tools across video generation, voice synthesis, AI coding agents, and generative design. It provides developers, creators, and enterprise architects with verified benchmark data, pricing models, and direct access links.
+
+## Categories Tracked
+- Coding & Agents: Cursor, Claude Code, AgentRules.dev, v0, Lovable.
+- Video AI: Kling AI, Luma Dream Machine, Runway Gen-3 Alpha, Pika 2.0.
+- Audio & Voice: Suno AI, Udio, ElevenLabs, Cartesia Sonic, Deepgram.
+- Image & Design: FLUX.1 by Black Forest Labs, Midjourney v6.
+- Search & Research: Perplexity AI.
+- Infrastructure: Fal.ai, RunPod, Replicate.
+
+## For Tool Creators
+- Express 24h Review ($49 USD): Fast-tracked listing + permanent DoFollow backlink.
+- Featured Sponsor Spotlight ($99 USD): Homepage #1 pinned card + banner spotlight.
+- Publisher: TEMA AI Technologies (https://tema.vn).
+- Contact: ceopatinhalo@gmail.com

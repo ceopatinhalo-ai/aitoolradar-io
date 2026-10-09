@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIToolRadar.io — Discover The Best Generative AI Tools & Solutions</title>
+  <meta name="description" content="The definitive real-time directory for verified AI tools. Discover top video, voice, coding, and image AI tools or get your AI product listed to 50k+ builders.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            radar: {
+              50: '#ecfeff',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+            },
+            dark: {
+              bg: '#07090e',
+              card: '#0f141f',
+              border: '#1b2333',
+              hover: '#172033'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #07090e; color: #f3f4f6; }
+    .glass-card { background: rgba(15, 20, 31, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.07); }
+    .glass-card:hover { border-color: rgba(34, 211, 238, 0.4); transform: translateY(-2px); transition: all 0.2s ease; }
+    .featured-card { border-color: rgba(245, 158, 11, 0.4); background: linear-gradient(180deg, rgba(245, 158, 11, 0.05) 0%, rgba(15, 20, 31, 0.9) 100%); }
+    .featured-card:hover { border-color: rgba(245, 158, 11, 0.8); }
+    .radar-beam {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .gradient-text { background: linear-gradient(135deg, #22d3ee 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans selection:bg-radar-500 selection:text-black">
+
+  <!-- TOP BANNER -->
+  <aside class="bg-gradient-to-r from-cyan-900/60 via-dark-bg to-emerald-900/60 border-b border-white/10 text-xs font-semibold py-2 px-4 text-center text-gray-300 flex items-center justify-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    <span class="font-mono text-cyan-400">RADAR ACTIVE:</span>
+    <span>20+ Curated generative AI tools tracked. Have a tool?</span>
+    <a href="submit.html" class="underline text-white font-bold hover:text-cyan-300 ml-1">Submit for 24h Express Review &rarr;</a>
+  </aside>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 w-full border-b border-white/10 bg-[#07090e]/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-500 flex items-center justify-center font-mono font-bold text-black shadow-lg shadow-cyan-500/20">
+          <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-white flex items-center gap-1.5">
+          AIToolRadar<span class="text-cyan-400">.io</span>
+        </span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+        <a href="#directory" class="hover:text-white transition">All Tools</a>
+        <a href="#featured" class="hover:text-white transition">Featured</a>
+        <a href="submit.html" class="hover:text-cyan-400 transition">Pricing & Submission</a>
+        <a href="https://ceopatinhalo-ai.github.io/agentrules-dev/" target="_blank" class="hover:text-purple-400 transition flex items-center gap-1">
+          <span>AgentRules</span>
+          <span class="text-[10px] bg-purple-500/20 text-purple-300 px-1.5 py-0.5 rounded font-mono">PRO</span>
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="submit.html" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 px-4 py-2 text-xs font-bold text-black shadow-lg shadow-cyan-500/20 hover:from-cyan-400 hover:to-emerald-400 transition transform hover:-translate-y-0.5">
+          Submit Tool ($49)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-semibold mb-6">
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      Global AI Discovery & Verified Sponsor Platform
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+      Track The Frontier.<br>
+      Discover Verified <span class="gradient-text">A.I Tools & Models</span>.
+    </h1>
+
+    <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Browse vetted tools across video, voice synthesis, coding agents, and generative media. Fast-track your workflow or list your product to get discovered.
+    </p>
+
+    <!-- SEARCH INPUT -->
+    <div class="max-w-2xl mx-auto mb-8 relative">
+      <div class="relative flex items-center">
+        <input type="text" id="search-input" placeholder="Search by name, technology, or capability (e.g. video, cursor, speech, flux)..."
+               class="w-full bg-[#0f141f] border border-white/10 rounded-2xl py-4 pl-12 pr-28 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 shadow-2xl">
+        <svg class="w-5 h-5 text-gray-400 absolute left-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span class="absolute right-4 text-xs font-mono text-gray-400 bg-white/5 px-2 py-1 rounded border border-white/10">ESC to clear</span>
+      </div>
+    </div>
+
+    <!-- CATEGORY FILTER PILLS -->
+    <div class="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto mb-8" id="category-filters">
+      <button data-cat="All" class="cat-pill active px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-500 text-black shadow-md font-mono">All Categories</button>
+      <button data-cat="Coding & Agents" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Coding & Agents</button>
+      <button data-cat="Video AI" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Video AI</button>
+      <button data-cat="Audio & Voice" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Audio & Voice</button>
+      <button data-cat="Image & Design" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Image & Design</button>
+      <button data-cat="Search & Research" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Search & Research</button>
+      <button data-cat="Infrastructure" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-300 hover:bg-white/10">Infrastructure</button>
+    </div>
+  </section>
+
+  <!-- DIRECTORY GRID -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24" id="directory">
+    <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+      <div>
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <span>Verified AI Tools</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        </h2>
+        <p class="text-xs text-gray-400 mt-1">Real-time status, capabilities, and direct access links</p>
+      </div>
+      <span id="tools-count" class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">20 Tools Active</span>
+    </div>
+
+    <!-- GRID CONTAINER -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tools-grid">
+      <!-- Dynamically populated via JS -->
+    </div>
+  </main>
+
+  <!-- SPONSOR CALL TO ACTION BANNER -->
+  <section class="py-16 bg-gradient-to-b from-[#07090e] via-[#0f141f] to-[#07090e] border-y border-white/10 px-4 sm:px-6 lg:px-8" id="featured">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-mono uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Creator & Developer Spotlight</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-4">Are You Building An AI Product?</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto text-sm mb-8 leading-relaxed">
+        Get your tool listed in front of active developers, founders, and content creators. Guaranteed 24-hour review with permanent DoFollow backlink.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="submit.html" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 px-6 py-3.5 text-sm font-bold text-black shadow-xl shadow-amber-500/20 transition transform hover:-translate-y-0.5">
+          <span>Get Featured ($49 - $99 USD)</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+        <a href="https://ceopatinhalo-ai.github.io/agentrules-dev/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-semibold text-gray-300 border border-white/10 transition">
+          Browse Coding Rulesets &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOL DETAIL MODAL -->
+  <div id="tool-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4">
+    <div class="bg-[#0f141f] border border-white/10 rounded-2xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="px-6 py-5 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div id="modal-icon" class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400">
+            AI
+          </div>
+          <div>
+            <h3 id="modal-title" class="text-lg font-bold text-white">Tool Name</h3>
+            <span id="modal-category" class="text-xs font-mono text-gray-400">Category</span>
+          </div>
+        </div>
+        <button id="modal-close-btn" class="p-2 text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-4 text-sm text-gray-300" id="modal-body">
+        <p id="modal-tagline" class="text-base text-white font-medium"></p>
+        <p id="modal-desc" class="text-xs text-gray-400 leading-relaxed"></p>
+        <div id="modal-tags" class="flex flex-wrap gap-1.5 pt-2"></div>
+      </div>
+
+      <div class="px-6 py-4 border-t border-white/10 bg-[#07090e] flex items-center justify-between">
+        <span id="modal-pricing-badge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">Free</span>
+        <a id="modal-visit-link" href="#" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black text-xs font-bold transition">
+          <span>Visit Official Website</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-[#07090e] py-12 px-4 sm:px-6 lg:px-8 text-center text-xs text-gray-500">
+    <p>&copy; 2026 AIToolRadar.io &bull; A product of <a href="https://tema.vn" class="text-cyan-400 hover:underline">TEMA AI Technologies</a>. All rights reserved.</p>
+    <p class="mt-2 text-gray-600">Built autonomously with Antigravity & Obsidian ODD Protocol.</p>
+  </footer>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    let allTools = [];
+    let currentCategory = 'All';
+
+    async function init() {
+      try {
+        const res = await fetch('tools-data.json');
+        allTools = await res.json();
+        renderTools(allTools);
+      } catch (err) {
+        console.error('Failed to load tools:', err);
+      }
+    }
+
+    function renderTools(tools) {
+      const grid = document.getElementById('tools-grid');
+      const count = document.getElementById('tools-count');
+      count.textContent = `${tools.length} Tools Tracked`;
+      grid.innerHTML = '';
+
+      if (tools.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-gray-500">
+            <p class="text-sm">No tools found matching your search.</p>
+            <button onclick="resetFilters()" class="mt-3 text-xs text-cyan-400 hover:underline">Reset filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      tools.forEach(tool => {
+        const card = document.createElement('div');
+        const isFeatured = tool.isFeatured;
+        card.className = `glass-card rounded-2xl p-6 flex flex-col justify-between ${isFeatured ? 'featured-card' : ''}`;
+
+        const featuredBadge = isFeatured
+          ? '<span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 font-mono tracking-wider">FEATURED</span>'
+          : '';
+
+        const pricingClass = tool.pricing === 'Free' ? 'text-emerald-300 bg-emerald-500/10 border-emerald-500/20'
+          : tool.pricing === 'Freemium' ? 'text-cyan-300 bg-cyan-500/10 border-cyan-500/20'
+          : 'text-purple-300 bg-purple-500/10 border-purple-500/20';
+
+        const tagsHtml = tool.tags.slice(0, 3).map(t => `<span class="bg-white/5 text-gray-400 text-[10px] px-2 py-0.5 rounded font-mono">${t}</span>`).join(' ');
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center font-mono font-bold text-xs text-cyan-400">
+                  ${tool.iconText}
+                </div>
+                <div>
+                  <h3 class="text-base font-bold text-white hover:text-cyan-400 transition cursor-pointer" onclick="openModal('${tool.id}')">${tool.name}</h3>
+                  <span class="text-[10px] text-gray-500 font-mono uppercase">${tool.category}</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5">
+                ${featuredBadge}
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold border ${pricingClass}">${tool.pricing}</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-gray-300 leading-snug mb-2 font-medium">${tool.tagline}</p>
+            <p class="text-[11px] text-gray-500 leading-relaxed mb-4 line-clamp-2">${tool.description}</p>
+            <div class="flex flex-wrap gap-1 mb-5">${tagsHtml}</div>
+          </div>
+
+          <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+            <div class="flex items-center gap-1 text-xs text-amber-400 font-bold">
+              <span>&#9733;</span>
+              <span>${tool.rating}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="openModal('${tool.id}')" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-medium text-gray-300 transition">
+                Details
+              </button>
+              <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-xs font-bold text-black transition flex items-center gap-1">
+                <span>Visit</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // FILTERS
+    document.getElementById('category-filters').addEventListener('click', (e) => {
+      if (e.target.classList.contains('cat-pill')) {
+        document.querySelectorAll('.cat-pill').forEach(b => {
+          b.classList.remove('active', 'bg-cyan-500', 'text-black', 'shadow-md');
+          b.classList.add('bg-white/5', 'text-gray-300');
+        });
+        e.target.classList.add('active', 'bg-cyan-500', 'text-black', 'shadow-md');
+        e.target.classList.remove('bg-white/5', 'text-gray-300');
+        currentCategory = e.target.getAttribute('data-cat');
+        applyFilters();
+      }
+    });
+
+    document.getElementById('search-input').addEventListener('input', applyFilters);
+
+    function applyFilters() {
+      const q = document.getElementById('search-input').value.toLowerCase().trim();
+      const filtered = allTools.filter(t => {
+        const matchCat = currentCategory === 'All' || t.category === currentCategory;
+        const matchText = t.name.toLowerCase().includes(q) || 
+                          t.tagline.toLowerCase().includes(q) || 
+                          t.description.toLowerCase().includes(q) || 
+                          t.tags.some(tag => tag.toLowerCase().includes(q));
+        return matchCat && matchText;
+      });
+      renderTools(filtered);
+    }
+
+    function resetFilters() {
+      document.getElementById('search-input').value = '';
+      currentCategory = 'All';
+      document.querySelectorAll('.cat-pill').forEach(b => {
+        b.classList.remove('active', 'bg-cyan-500', 'text-black');
+        b.classList.add('bg-white/5', 'text-gray-300');
+        if (b.getAttribute('data-cat') === 'All') {
+          b.classList.add('active', 'bg-cyan-500', 'text-black');
+          b.classList.remove('bg-white/5', 'text-gray-300');
+        }
+      });
+      renderTools(allTools);
+    }
+
+    // MODAL
+    function openModal(id) {
+      const tool = allTools.find(t => t.id === id);
+      if (!tool) return;
+      document.getElementById('modal-icon').textContent = tool.iconText;
+      document.getElementById('modal-title').textContent = tool.name;
+      document.getElementById('modal-category').textContent = tool.category;
+      document.getElementById('modal-tagline').textContent = tool.tagline;
+      document.getElementById('modal-desc').textContent = tool.description;
+      document.getElementById('modal-pricing-badge').textContent = tool.pricing;
+      document.getElementById('modal-visit-link').href = tool.url;
+      
+      const tagsContainer = document.getElementById('modal-tags');
+      tagsContainer.innerHTML = tool.tags.map(t => `<span class="bg-white/5 text-cyan-400 text-xs px-2.5 py-1 rounded font-mono border border-cyan-500/20">${t}</span>`).join(' ');
+      
+      document.getElementById('tool-modal').classList.remove('hidden');
+    }
+
+    document.getElementById('modal-close-btn').addEventListener('click', () => {
+      document.getElementById('tool-modal').classList.add('hidden');
+    });
+
+    init();
+  </script>
+</body>
+</html>
